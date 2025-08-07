@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahamove 10th Birthday Celebration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- The cake image will be positioned on top -->
+        <img src="../assets/cake_10.png" alt="Birthday Cake" class="cake-image">
+
+        <div class="form-box">
+            <h1>Join the Celebration!</h1>
+            <p>Enter your Ahamove email and upload a photo of yourself to receive a personalized birthday card!</p>
+
+            <form id="celebration-form">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g., your.name@ahamove.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="portrait">Upload Your Portrait</label>
+                    <input type="file" id="portrait" name="portrait" accept="image/png, image/jpeg" required>
+                </div>
+
+                <button type="submit" id="submit-btn">Generate My Card</button>
+            </form>
+            
+            <!-- This area is for showing messages to the user (e.g., loading, errors) -->
+            <div id="status-message"></div>
+        </div>
+
+        <!-- The company logo at the bottom -->
+        <img src="../assets/ahamove_logo_transparent_bg.png" alt="Ahamove Logo" class="logo-image">
+    </div>
+
+    <!-- We'll make this work in the next task -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* --- Basic Setup & Variables --- */
+:root {
+    --primary-color: #FF6600; /* Ahamove Orange */
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Main Card Container --- */
+.card-container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    padding-top: 100px; /* Space for the cake image */
+}
+
+/* --- Image Styling --- */
+.cake-image {
+    position: absolute;
+    top: -50px; /* Pull the cake up to overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    z-index: 10; /* Make sure it's on top of the form box */
+}
+
+.logo-image {
+    display: block;
+    width: 150px;
+    margin: 30px auto 0; /* Center it below the card */
+}
+
+/* --- Form Box & Content --- */
+.form-box {
+    background: var(--card-background);
+    border-radius: 16px;
+    padding: 60px 40px 40px 40px; /* More padding at the top */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* --- Form Elements --- */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="file"] {
+    padding: 8px; /* File inputs look better with less padding */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c00; /* A darker orange on hover */
+}
+
+/* --- Status Message Area --- */
+#status-message {
+    margin-top: 20px;
+    font-weight: 600;
+}
