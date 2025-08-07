@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Data Validation ---
         if (!portraitInput.files || portraitInput.files.length === 0) {
-            statusMessage.textContent = 'Please select an image file to upload.';
+            statusMessage.textContent = 'Please select a portrait image file to upload.';
             statusMessage.style.color = 'red';
             submitBtn.disabled = false;
             submitBtn.textContent = 'Generate My Card';
