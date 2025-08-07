@@ -71,7 +71,7 @@ exports.handler = async (event) => {
     // The portrait image itself
     const imageUploadCommand = new PutObjectCommand({
       Bucket: process.env.R2_BUCKET_NAME,
-      Key: `${objectKey}.png`,
+      Key: `inbox/${objectKey}.png`,
       Body: portraitFile.content,
       ContentType: portraitFile.mimeType,
     });
@@ -79,7 +79,7 @@ exports.handler = async (event) => {
     // A small JSON file with the submission's metadata
     const metadataUploadCommand = new PutObjectCommand({
       Bucket: process.env.R2_BUCKET_NAME,
-      Key: `${objectKey}.json`,
+      Key: `inbox/${objectKey}.json`,
       Body: JSON.stringify({
         email: email,
         isGeneric: proceedGeneric,
